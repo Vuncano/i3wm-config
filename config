@@ -203,8 +203,8 @@ bindsym Shift+XF86MonBrightnessUp exec --no-startup-id brightnessctl set +1%
 bindsym Shift+XF86MonBrightnessDown exec --no-startup-id brightnessctl set 1%-
 
 # screen shot
-bindsym Print exec flameshot screen
-bindsym ctrl+Print exec flameshot screen -c
+bindsym Print exec flameshot screen -c
+bindsym ctrl+Print exec flameshot gui
 
 
 # wallpaper
