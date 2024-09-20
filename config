@@ -151,6 +151,9 @@ bindsym $mod+Shift+r restart
 #exit i3 without mouse
 bindsym $mod+Shift+e exec sh ~/.config/i3/i3_exit.sh
 
+##Shutdown PC
+bindsym $mod+Shift+s exec sh ~/.config/i3/i3_sd.sh
+
 
 
 
@@ -202,22 +205,21 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym Shift+XF86MonBrightnessUp exec --no-startup-id brightnessctl set +1%
 bindsym Shift+XF86MonBrightnessDown exec --no-startup-id brightnessctl set 1%-
 
-# screen shot
-bindsym Print exec flameshot screen -c
-bindsym ctrl+Print exec flameshot gui
+# screenshot
+# bindsym Print exec flameshot screen -c
+# bindsym ctrl+Print exec flameshot gui
+bindsym ctrl+Print exec screenshot clip
+bindsym Print exec screenshot
 
 
 # wallpaper
-#exec_always feh --bg-scale Pictures/adventuretime/2022-10-29_00-42.png
-#exec_always feh --bg-scale Pictures/adventuretime/flame.png
-# exec_always feh --bg-scale Pictures/frutiger_aero/black_blue.jpg
-#exec_always feh --bg-scale Pictures/vim.png
-#exec_always feh --bg-scale Pictures/lgbv.png
-#exec_always feh --bg-scale Pictures/vimzão.png
-# exec_always feh --bg-scale Documents/schedule.png
-# exec_always feh --bg-scale Pictures/auttumn.jpg
-exec_always feh --bg-scale Pictures/windowsxp/windowsxo/Follow.jpg
-# exec_always feh --bg-scale Pictures/horarios20232.png
+# exec_always feh --bg-scale ~/Pictures/HL/hl5
+# exec_always feh --bg-scale ~/Pictures/sigil-wallpaper-2560x1440.png
+# exec_always feh --bg-scale ~/Pictures/Screenshot_2023-04-22_144347.png
+# exec_always feh --bg-scale ~/Pictures/meridian/line.PNG
+exec_always feh --bg-scale ~/Pictures/vuncano1.jpg
+# exec_always feh --bg-scale ~/Pictures/vuncano2.jpg
+
 
 
 # floating pop up automatically (testing)
@@ -274,3 +276,6 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 font pango:DejaVu Sans Mono 0
 
 exec_always unclutter
+
+# battery check
+exec_always ~/.config/bashrc/scripts/battery.sh
